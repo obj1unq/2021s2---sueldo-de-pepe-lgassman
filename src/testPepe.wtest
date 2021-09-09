@@ -5,6 +5,8 @@ describe "Sueldo Pepe" {
 	test "neto gerente" {
 		pepe.categoria(gerente)
 		assert.equals(15000, pepe.sueldoNeto())
+		gerente.neto(30000)
+		assert.equals(30000, pepe.sueldoNeto())
 	}
 	
 	test "neto cadete" {
@@ -12,6 +14,12 @@ describe "Sueldo Pepe" {
 		assert.equals(20000, pepe.sueldoNeto())
 		
 	}
-
+	
+	test "bono fijo" {
+		pepe.categoria(cadete)
+		pepe.bonoPorResultado(bonoResultadoFijo)
+		assert.equals(800, pepe.valorPorBonoResultado())
+	}
+	
 	
 }
