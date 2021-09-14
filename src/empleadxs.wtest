@@ -1,0 +1,9 @@
+import pepe.*
+
+test "sofia tiene mas neto que el resto" {
+	pepe.categoria(cadete)
+	sofia.categoria(cadete)
+	assert.equals(20000,cadete.neto())
+	assert.equals(20000,pepe.sueldoNeto())
+	assert.equals(26000,sofia.sueldoNeto())
+}
